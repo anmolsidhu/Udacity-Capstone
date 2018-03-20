@@ -45,6 +45,6 @@ class Controller(object):
 
         predictive_steering = self.yaw_controller.get_steering(proposed_linear_velocity, proposed_angular_velocity, current_linear_velocity)
         
-        steering = predictive_steering
+        steering = predictive_steering*0 + 0.1
 
         return throttle, brake, steering
